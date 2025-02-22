@@ -53,6 +53,25 @@
         left: 12%;
     }
 
+    .carousel-indicators button {
+    width: 12px !important; 
+    height: 12px !important; 
+    border-radius: 50% !important; 
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 0 5px;
+    
+    }
+
+    /* Se mantiene el color, pero sin la animación de agrandarse */
+    .carousel-indicators .active {
+        background-color: orange;
+        border: 2px solid orange;
+    }
+
+    
+    
+    
+
 /*Eslogan*/
 
     .eslogan{
