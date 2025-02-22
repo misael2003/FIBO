@@ -8,8 +8,8 @@ USE fibonacci;
     CREATE TABLE sueldo(
         id_sueldo INTEGER NOT NULL,
         horas INT NOT NULL,
-        precio_hora INT NOT NULL,
-        sueldo_total INT NOT NULL,
+        precio_hora DOUBLE NOT NULL,
+        sueldo_total DOUBLE NOT NULL,
         PRIMARY KEY(id_sueldo)
     )DEFAULT CHARACTER SET utf8;
 
@@ -19,7 +19,7 @@ USE fibonacci;
         nombre_trabajador VARCHAR(40) NOT NULL,
         apellidos_trabajador VARCHAR(40) NOT NULL,
         correo_trabajador VARCHAR(40) NOT NULL UNIQUE,
-        numero_trabajador VARCHAR(40) NOT NULL UNIQUE,
+        numero_trabajador VARCHAR(10) NOT NULL UNIQUE,
         ocupacion VARCHAR(40) NOT NULL,
         CURP VARCHAR(18) NOT NULL UNIQUE,
         RFC VARCHAR(13) NOT NULL UNIQUE,
@@ -45,7 +45,7 @@ USE fibonacci;
         CREATE TABLE paquete(
             id_paquete INT NOT NULL AUTO_INCREMENT,
             nombre_paquete VARCHAR(40) NOT NULL UNIQUE,
-            costo_paquete INT NOT NULL,
+            costo_paquete DOUBLE NOT NULL,
             PRIMARY KEY(id_paquete)
         )DEFAULT CHARACTER SET utf8;
 
@@ -71,7 +71,7 @@ USE fibonacci;
 
             PRIMARY KEY(id_grupo),
             CONSTRAINT FK_ID_SALON_NO_EXISTE FOREIGN KEY(nombre_salon) REFERENCES salon(nombre_salon),
-            CONSTRAINT FK_ID_MAESTRO_NO_EXISTE FOREIGN KEY(id_maestro) REFERENCES maestro(id_maestro),
+            
             CONSTRAINT FK_ID_PAQUETE__ FOREIGN KEY(id_paquete) REFERENCES paquete(id_paquete)
         ) DEFAULT CHARACTER SET utf8;
 
@@ -134,8 +134,8 @@ USE fibonacci;
     CREATE TABLE pago(
         folio_pago VARCHAR(10) NOT NULL,
         id_paquete INT NOT NULL,
-        descuento INT NOT NULL,
-        costo_pago INT NOT NULL,
+        descuento DOUBLE NOT NULL,
+        costo_pago DOUBLE NOT NULL,
         id_alumno VARCHAR(10) NOT NULL,
 
         PRIMARY KEY(folio_pago),
