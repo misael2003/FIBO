@@ -1,0 +1,177 @@
+/*Reseteo y configuraciones generales*/
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); /*ROBOTO*/
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*BEBAS NEUE*/
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", serif;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        font-family: "Bebas Neue", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+/*Estilizamos la barra de navegacion*/
+
+    .logoNav{margin-top: 1.5%;margin-left: 5%;}
+
+/*Carrusel de presentacion*/
+    #principal{width: 100%;}
+    
+    .carrusel{display: flex;}
+
+    .contenidoCarrusel{
+        width: 100%;
+        height: 500px;
+        color: white;
+        margin: auto;
+        position: relative;
+        background-image:url("../IMG/sitio/carruselUno.png");
+        background-size: cover; 
+        background-repeat:no-repeat;
+    }
+    #carruselTexto{position: absolute;top: 39%; left: 35%;}
+    
+    .imgControlador{width: 50px; transition-duration: 0.6;}
+    .imgControlador:hover{opacity: 35%;}
+    
+    .btnControlador{background:transparent;border: 0cm;}
+    
+    .btnSiguiente{
+        position: absolute;
+        top: 34%;
+        left: 83%;
+    }
+
+    .btnAnterior{
+        position: absolute;
+        top: 34%;
+        left: 12%;
+    }
+
+    .carousel-indicators button {
+    width: 12px !important; 
+    height: 12px !important; 
+    border-radius: 50% !important; 
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 0 5px;
+    
+    }
+
+    /* Se mantiene el color, pero sin la animación de agrandarse */
+    .carousel-indicators .active {
+        background-color: orange;
+        border: 2px solid orange;
+    }
+
+    
+    
+    
+
+/*Eslogan*/
+
+    .eslogan{
+        margin-top: 4%;
+        width: 100%;
+        font-size: 31pt;
+        font-style: italic;
+        text-align: center; 
+        color: #383838;   
+    }
+
+/*Configuramos la seccion de ofertas*/
+
+    .subtituloUno{
+        width: 30%; 
+        display: flex;
+        margin-left: 40px;
+        margin-top: 100px;
+    }
+
+    .textoSubtitulo{font-size: 71pt;color: #383838;}
+    .contenidoSubtitulo{margin-left: 5%;}
+
+    .divisionSubtitulo{
+        margin-top: 17px;
+        height: 70px;
+        width: 20px; 
+        background: #f08521;
+        color: #f08521;
+    }
+    
+    .productos{
+        display: flex; 
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+    }
+
+    .items{margin-left: 80px;cursor:pointer; margin-top: 40px;}
+
+    .items:hover{margin-top: 10px;}
+
+    .itemTitulo{
+        font-size: 31pt; 
+        text-align: center; 
+        color: #383838;
+    }
+    #textoTituloItem {position:relative;top: 15px;}
+
+    .itemDivision{
+        height: 2px;
+        background-color: #f08521;
+        border-radius: 10px;
+        color: white;
+    }
+
+    .itemImg{
+        width: 400px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .itemContenido{
+        width: 400px;
+        text-align: justify;
+        font-size: 12pt;
+        margin-top: 32px;
+    }
+
+/*FOOTER*/
+
+    footer{
+        display: flex;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .logo{margin-left: 5%; margin-top: 5%;}
+    .imgLogo{width: 300px;}
+
+    .socialLogo{
+        margin-top: 8%;
+        margin-left: 4%;
+        height: 50px;  
+    }
+    .socialMedia{
+        list-style-type: none;
+        display: flex;
+    }
+    .contenidoMedia{margin-left: 55px;}
+    a{text-decoration: none;}
+
+    .textoFooter{
+        margin-top: 2.8%;
+        margin-left: 3%;
+    }
+
+    .direccionFooter{text-align: end;font-size: 20pt}
+
+    .numeroFooter{
+        text-align: end; 
+        color: #f08521;
+        font-size: 24pt;
+    }
